@@ -1,0 +1,26 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": " Quatrième projet du parcours d'intégrateur web chez Openclassrooms. L'objectif est d'intégrer puis de dynamiser une page web avec des animations en utilisant le préprocesseur Sass",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/styles.scss:./css/styles.css --style expanded",
+    "prefix": "postcss ./css/styles.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : ""
+  },
+  "dependencies": {
+    "postcss" : "8.4.21",
+    "sass" : "1.57.1",
+    "postcss-cli" : "10.1.0",
+    "autoprefixer" : "10.4.13"
+  },
+  "author": "Mohamed Guerroui",
+  "license": "ISC",
+  "bugs" : {
+    "url" : ""
+  },
+  "browserslist": "last 4 versions"
+}
