@@ -1,1 +1,82 @@
-/*# sourceMappingURL=styles.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0rem 0 0.5rem rgba(0, 0, 0, 0.25);
+  height: 93px;
+  padding: 0.1rem;
+  margin: 0;
+  position: relative;
+}
+.header__title {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 400;
+  padding: 0.5rem;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #f3f3f3;
+  height: 70px;
+  -moz-column-gap: 17px;
+       column-gap: 17px;
+}
+.search__icon {
+  width: 12px;
+  height: 16px;
+}
+.search__location {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.reserve {
+  text-align: center;
+}
+.reserve__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.reserve__text {
+  font-size: 18px;
+  font-weight: 300;
+}
+.reserve__btn {
+  border: none;
+  border-radius: 10rem;
+  padding: 0.8rem;
+  width: 80%;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: transform 400ms;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.reserve__btn--gradient {
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+  margin-top: 1.2rem;
+}
+.reserve__btn:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.fonctionnement {
+  background-color: #d2d2d2;
+}
+
+.restaurants {
+  background-color: #d2d2d2;
+}/*# sourceMappingURL=styles.css.map */
