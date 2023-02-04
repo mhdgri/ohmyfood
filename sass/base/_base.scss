@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 body {
     font-family: 'Roboto', sans-serif;
