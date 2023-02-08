@@ -6,6 +6,7 @@
 
 .search {
     @include flex-row;
+    justify-content: center;
     background-color: #d2d2d2;
     height: 70px;
     column-gap: 17px;;
@@ -151,4 +152,66 @@
     }
 }
 
+.restaurant {
+    font-family: "shrikhand", sans-serif;
+    padding: 0 10% 0 10%;
+    padding-top: 20px;
+    border-radius: 40px 40px 0px 0px;
+    @include flex-row;
+    justify-content: space-between;
+    & i{
+        background-color: #f6f6f6;
+        margin-right: 32px;
+        cursor: pointer;
+    }
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5%;
+    row-gap: 20px;
+    & > h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+.food-content {
+    text-align: left;
+    width:95%;
+    border: none;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: auto;
+    padding: 10px;
+    background: $color-white;
+    & > h4 {
+        margin:0 0 8px 0;
+    }
+    &__text-price {
+        display: flex;
+        justify-content: space-between;
+        & > p {
+            margin: 0;
+        }
+    }
+}
+
+.title-h2 {
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+    & > h1 {
+        font-family: "shrikhand", sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        font-style: italic;
+    }
+}
 

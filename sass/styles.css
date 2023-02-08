@@ -4,6 +4,18 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  position: relative;
+  background-color: #f6f6f6;
+}
+body > img {
+  width: 100%;
+}
+body > .main-around {
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  top: -56px;
+  background-color: #f6f6f6;
+  margin-bottom: 0;
 }
 
 .header {
@@ -44,11 +56,34 @@ body {
   opacity: 0.9;
 }
 
-.search {
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.flex__button {
+  border: none;
+  padding: 0.8rem;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10rem;
+  color: #fff;
+  width: 50%;
+  cursor: pointer;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  height: 66px;
+  margin-top: 26px;
+}
+.flex__button :hover {
+  opacity: 0.9;
+}
+
+.search {
+  display: flex;
+  align-items: center;
   flex-direction: row;
+  justify-content: center;
   background-color: #d2d2d2;
   height: 70px;
   -moz-column-gap: 17px;
@@ -93,7 +128,6 @@ body {
 }
 .fonctionnement__btn {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: row;
   -moz-column-gap: 2rem;
@@ -201,4 +235,69 @@ body {
   flex-direction: column;
   row-gap: 10px;
   width: 90%;
+}
+
+.restaurant {
+  font-family: "shrikhand", sans-serif;
+  padding: 0 10% 0 10%;
+  padding-top: 20px;
+  border-radius: 40px 40px 0px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.restaurant i {
+  background-color: #f6f6f6;
+  margin-right: 32px;
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5%;
+  row-gap: 20px;
+}
+.center > h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.food-content {
+  text-align: left;
+  width: 95%;
+  border: none;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin: auto;
+  padding: 10px;
+  background: #fff;
+}
+.food-content > h4 {
+  margin: 0 0 8px 0;
+}
+.food-content__text-price {
+  display: flex;
+  justify-content: space-between;
+}
+.food-content__text-price > p {
+  margin: 0;
+}
+
+.title-h2 {
+  font-size: 28px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-center > h1 {
+  font-family: "shrikhand", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: italic;
 }/*# sourceMappingURL=styles.css.map */

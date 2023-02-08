@@ -23,3 +23,11 @@
     }
 
 }
+
+
+.flex {
+    @include flex-center;
+    &__button {
+    @include button-order;
+    }
+}
