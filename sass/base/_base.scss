@@ -10,7 +10,6 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    position: relative;
     background-color: #f6f6f6;
     & > img {
         @include img;

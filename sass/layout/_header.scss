@@ -5,11 +5,12 @@
     height: 93px;
     padding: .1rem;
     margin: 0;
-    position: relative;
     &__title {
-        font-size: 28px;
-        font-style: italic;
-        font-weight: 400;
+        font: {
+            size: 28px;
+            style: italic;
+            weight: 400;
+        }
         padding: .5rem;
     }
 }
