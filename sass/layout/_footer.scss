@@ -1,0 +1,38 @@
+
+.footer {
+    background-color: $color-secondary;
+    color: $color-white;
+    padding: 1.5rem 0 3rem 1.5rem;
+    &__content {
+        @include tablet {
+            display:flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+            column-gap: 3rem;
+            padding: 3rem 0;
+        }
+        @include desktop {
+            display:flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+            column-gap: 4rem;
+            padding: 3rem 0;
+        }
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        @include tablet {
+            @include flex-row;
+            column-gap: 1.5rem;
+        }
+        @include desktop {
+            @include flex-row;
+            column-gap: 2.5rem;
+            
+        }
+    }
+}

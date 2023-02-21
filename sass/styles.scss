@@ -3,6 +3,9 @@
 @import "./utils/mixins";
 @import "./utils/variables";
 @import "./components/buttons";
+@import "./pages/menu";
+@import "./layout/footer";
+@import "./pages/home";
 
 .search {
     @include flex-row;
@@ -153,51 +156,48 @@
     &__place-restaurant {
         margin-top: 5px;  
     }
-    &__heart {
-        margin-right: 2rem;
+    .fa-heart{
+        font-size: 3rem;
+        margin-right: 1rem;
     }
+    &__container{
+        position: absolute;
+        top: 86%; left: 90%;
+        transform: translate(-50%, -50%);
+    } 
+    .heart{
+        position:relative;
+        z-index:1;
+        cursor: pointer;
+        -webkit-text-stroke: 2px $color-white;
+    }
+    .heart-color{
+        position:absolute;
+        left:0;
+        top:0px;
+        z-index:-1;
+        background: linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity:0;
+        transform: scale(0);
+        transition:.3s ease;
+    }  
+    .heart:hover .heart-color{
+        transform:scale(1);
+        opacity:1;
+    }
+    .heart:hover{
+        background: linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0px $color-white;
+    }   
 }    
 
 
 
 
-.footer {
-    background-color: $color-secondary;
-    color: $color-white;
-    padding: 1.5rem 0 3rem 1.5rem;
-    &__content {
-        @include tablet {
-            display:flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            justify-content: center;
-            column-gap: 3rem;
-            padding: 3rem 0;
-        }
-        @include desktop {
-            display:flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            justify-content: center;
-            column-gap: 4rem;
-            padding: 3rem 0;
-        }
-    }
-    &__link {
-        display: flex;
-        flex-direction: column;
-        row-gap: 0.5rem;
-        @include tablet {
-            @include flex-row;
-            column-gap: 1.5rem;
-        }
-        @include desktop {
-            @include flex-row;
-            column-gap: 2.5rem;
-            
-        }
-    }
-}
 
 .restaurant {
     font-family: "shrikhand", sans-serif;
@@ -213,39 +213,6 @@
     }
 }
 
-.center {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 5%;
-    row-gap: 20px;
-    width: 90%;
-    &__title {
-        margin: 0;
-        font-size: 16px;
-        font-weight: 300;
-    }
-}
-
-.food-content {
-    text-align: left;
-    border: none;
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    margin: auto;
-    padding: 10px;
-    background: $color-white;
-    width: 100%;
-    & > h4 {
-        margin:0 0 8px 0;
-    }
-    &__text-price {
-        display: flex;
-        justify-content: space-between;
-        & > p {
-            margin: 0;
-        }
-    }
-}
 
 .title-h2 {
     font: {

@@ -1,0 +1,33 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5%;
+    row-gap: 20px;
+    width: 90%;
+    &__title {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+.food-content {
+    text-align: left;
+    border: none;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: auto;
+    padding: 10px;
+    background: $color-white;
+    width: 100%;
+    & > h4 {
+        margin:0 0 8px 0;
+    }
+    &__text-price {
+        display: flex;
+        justify-content: space-between;
+        & > p {
+            margin: 0;
+        }
+    }
+}
