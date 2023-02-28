@@ -114,7 +114,15 @@
         
     }
     &__indication {
-        margin-left: 20px;
+        margin-left: 10px;
+        & h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        & p {
+            font-size: 17px;
+            font-weight: 300;
+        }
     }         
     &__name-restaurant {
         margin: {
@@ -135,6 +143,5 @@
     justify-content: space-between;
     & .content {
         margin-right: 3.5rem;
-        margin-bottom: 0.8rem;
     }
 }
