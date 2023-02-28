@@ -459,7 +459,7 @@ h3, p {
 
 .content {
   position: absolute;
-  top: 86%;
+  top: 80%;
   left: 90%;
   transform: translate(-50%, -50%);
 }
