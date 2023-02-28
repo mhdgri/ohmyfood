@@ -1,36 +1,7 @@
-.reserve {
-
-    &__btn {
-        border: none;
-        border-radius: 10rem;
-        padding: .8rem;
-        width: 80%;
-        color: $color-white;
-        font: {
-            size: 14px;
-            weight: 500;
-        }
-        transition: transform 400ms;
-        cursor: pointer;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-        margin-bottom: 3rem;
-        @include desktop {
-            width: 20%;
-        }
-        &--gradient {
-            background-image: linear-gradient(to bottom, #ff79da, #9356dc) ;
-            margin-top: 1.2rem;
-        }
-        &:hover {
-            transform: scale(1.03);
-            opacity: 0.9;
-        }
-    }
-
-}
 
 .fonctionnement{
-    &__btn {
+    counter-reset: numbers;
+    &__lists {
         @include flex-column;
         row-gap: 2rem;
         width: 90%;
@@ -39,51 +10,60 @@
             column-gap: 2rem;
             width: 80%;
         }
-        &--rounded {
-            padding: 1.5rem 0;
-            border-radius: 15px;
-            border: none;
+    }
+    & li {
+        width: 90%;
+        position: relative;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15); 
+        list-style-type: none;
+        padding: 1.5rem 0rem;
+        border-radius: 15px;
+        border: none;
+        transition: all 0.3s ease;
+        background-color: #f6f6f6;
+        font: {
+            size: 14px;
+            weight: 500;
+        }   
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.02);
+            background: #fff;
+            box-shadow: 0 0 .5rem rgba(0 0 0 / 60%);
         }
-        &--size {
-            font: {
-                size: 14px;
-                weight: 500;
-            }
-            width: 100%;
-            position: relative;
-        }
-        &--grey {
-            background-color: $color-primary;
-            box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
-
-            &:hover {
-                cursor: pointer;
-                background-color: #f5edff;
-            }
-        }
-        & .number {
-            position: absolute;
-            left: -13px;
-            top: 20px;
-            height: 24px;
-            width: 24px;
-            border: none;
-            outline: none;
-            border-radius: 50%;
+        &::before {
+            content: counter(numbers);
+            counter-increment: numbers;
+            color:white;
             background-color: #9356dc;
-            color: $color-white;
-            @include flex-center;
+            width: 2rem;
+            height: 2rem;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            position: absolute;
+            left: -1rem;
+            top: 1rem;
         }
-        & i {
-            margin-right: 20px;
-        }
+    }
+    & i {
+    margin: 0 1.5rem 0 2rem;
+    } 
+}
+
+.btn {
+    @include flex-center;
+    &__content {
+        @include btn;
+        width: 13rem;
+        margin-top: 4rem;
     }
 }
 
-
-.flex {
-    @include flex-center;
-    &__button {
-    @include button-order;
+.reserve {
+    &__btn {
+        @include btn;
+        margin-top: 1rem;
+        width: 14rem;
     }
 }

@@ -1,0 +1,41 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font: {
+        family: "shrikhand", sans-serif;
+        weight: 400;
+        style: italic;
+        size: 30px;
+    }
+}
+
+h2 {
+    font: {
+        size: 24px;
+        weight: 700;
+    }
+}
+
+h4 {
+    font: {
+        weight: 500;
+        size: 18px;
+    }
+    & + p {
+        font: {
+            weight: 400;
+            size:16px;
+        }
+    }
+}
+
+.restaurant__heading {
+    font: {
+        family: "shrikhand", sans-serif;
+        size: 28px;
+        style: italic;
+        weight: 400;
+    }
+}
