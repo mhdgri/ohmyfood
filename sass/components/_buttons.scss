@@ -1,18 +1,45 @@
 
+.back {
+    background-color: #fff;
+    margin:0 auto;
+    width: 100%;
+}
 .fonctionnement{
     counter-reset: numbers;
+    row-gap: .5rem;
+    padding: 48px 0 68px 0;
+    width: 100%;
+    @include flex-column;
+    @include desktop {
+        width: 98%;
+    }
+    &__title {
+        width: 90%;
+        font: {
+            size: 24px;
+            style: bold;
+            weight: 700;
+        }
+        @include desktop {
+            width: 85%;
+        }
+    }
     &__lists {
-        @include flex-column;
+        display:flex;
+        flex-direction: column;
         row-gap: 2rem;
         width: 90%;
         @include desktop {
             @include flex-row;
             column-gap: 2rem;
-            width: 80%;
+            width: 85%;
         }
     }
     & li {
-        width: 90%;
+        @include desktop {
+            width: 90%;
+        }
+        width: 95%;
         position: relative;
         box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15); 
         list-style-type: none;

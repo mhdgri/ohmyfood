@@ -53,13 +53,40 @@ h3, p {
   top: 1.6rem;
 }
 
+.back {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .fonctionnement {
   counter-reset: numbers;
+  row-gap: 0.5rem;
+  padding: 48px 0 68px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1023px) {
+  .fonctionnement {
+    width: 98%;
+  }
+}
+.fonctionnement__title {
+  width: 90%;
+  font-size: 24px;
+  font-style: bold;
+  font-weight: 700;
+}
+@media (min-width: 1023px) {
+  .fonctionnement__title {
+    width: 85%;
+  }
 }
 .fonctionnement__lists {
   display: flex;
   flex-direction: column;
-  align-items: center;
   row-gap: 2rem;
   width: 90%;
 }
@@ -70,11 +97,11 @@ h3, p {
     flex-direction: row;
     -moz-column-gap: 2rem;
          column-gap: 2rem;
-    width: 80%;
+    width: 85%;
   }
 }
 .fonctionnement li {
-  width: 90%;
+  width: 95%;
   position: relative;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
   list-style-type: none;
@@ -85,6 +112,11 @@ h3, p {
   background-color: #f6f6f6;
   font-size: 14px;
   font-weight: 500;
+}
+@media (min-width: 1023px) {
+  .fonctionnement li {
+    width: 90%;
+  }
 }
 .fonctionnement li:hover {
   cursor: pointer;
@@ -321,38 +353,12 @@ h3, p {
   font-weight: 300;
 }
 
-.fonctionnement {
-  text-align: left;
-  padding: 2.4rem 0;
-  row-gap: 0.4rem;
-  margin: 0 auto;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (min-width: 1023px) {
-  .fonctionnement {
-    width: 100%;
-  }
-}
-.fonctionnement__title {
-  width: 80%;
-  font-size: 24px;
-  font-style: bold;
-  font-weight: 700;
-}
-@media (min-width: 1023px) {
-  .fonctionnement__title {
-    width: 80%;
-  }
-}
-
 .restaurants {
   background-color: #f7f7f7;
-  width: 80%;
+  width: 90%;
   padding: 2rem 0 6rem 0;
   margin: 0 auto;
+  width: 85%;
 }
 .restaurants__cards {
   display: grid;
