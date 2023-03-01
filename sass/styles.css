@@ -3,25 +3,12 @@
 body {
   margin: 0 auto;
   padding: 0;
-  background-color: #f6f6f6;
+  background-color: inherit;
 }
 @media screen {
   body {
     max-width: 1400px;
   }
-}
-body > img {
-  width: 100%;
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-body > .main-around {
-  border-radius: 40px 40px 0 0;
-  position: relative;
-  top: -86px;
-  background-color: #f6f6f6;
-  margin-bottom: 0;
 }
 
 a {
@@ -185,6 +172,51 @@ h3, p {
   transform: scale(1.02);
 }
 
+body img {
+  width: 100%;
+  height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .main-around {
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  top: -86px;
+  background-color: #f6f6f6;
+  padding-bottom: 70px;
+}
+@media screen and (min-width: 1023px) {
+  body .main-around {
+    position: relative;
+    top: -70px;
+    margin: 0 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+.restaurant {
+  padding: 20px 0 0 5%;
+  border-radius: 40px 40px 0px 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (min-width: 1023px) {
+  .restaurant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+}
+.restaurant .content {
+  margin-right: 3.5rem;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -261,6 +293,12 @@ h3, p {
   background-color: #353535;
   color: #fff;
   padding: 1.5rem 0 3rem 1.5rem;
+  margin-top: -86px;
+}
+@media (min-width: 1023px) {
+  .footer {
+    margin-top: -70px;
+  }
 }
 @media (min-width: 767px) {
   .footer__content {
@@ -353,10 +391,13 @@ h3, p {
   font-weight: 300;
 }
 
+.back {
+  background: #f7f7f7;
+}
+
 .restaurants {
-  background-color: #f7f7f7;
   width: 90%;
-  padding: 2rem 0 6rem 0;
+  padding: 2rem 0 10rem 0;
   margin: 0 auto;
   width: 85%;
 }
@@ -457,19 +498,6 @@ h3, p {
 }
 .card__place-restaurant {
   margin-top: 5px;
-}
-
-.restaurant {
-  padding: 20px 0 0 5%;
-  border-radius: 40px 40px 0px 0px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.restaurant .content {
-  margin-right: 3.5rem;
 }
 
 .content .fa-heart {

@@ -3,6 +3,10 @@
     background-color: $color-secondary;
     color: $color-white;
     padding: 1.5rem 0 3rem 1.5rem;
+    margin-top: -86px;
+    @include desktop{
+        margin-top: -70px;
+    }
     &__content {
         @include tablet {
             display:flex;
