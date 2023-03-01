@@ -76,7 +76,7 @@ h3, p {
 .fonctionnement__title {
   width: 90%;
   font-size: 24px;
-  font-style: bold;
+  font-style: normal;
   font-weight: 700;
 }
 @media (min-width: 1023px) {
