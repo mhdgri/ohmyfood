@@ -196,7 +196,7 @@ body .main-around {
 }
 
 .restaurant {
-  padding: 20px 0 0 5%;
+  padding: 20px 7% 0 5%;
   border-radius: 40px 40px 0px 0px;
   position: relative;
   display: flex;
@@ -212,9 +212,6 @@ body .main-around {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
   }
-}
-.restaurant .content {
-  margin-right: 3.5rem;
 }
 
 .menu {
@@ -480,6 +477,7 @@ body .main-around {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  padding-right: 1.5rem;
 }
 .card__indication {
   margin-left: 10px;
@@ -502,7 +500,6 @@ body .main-around {
 
 .content .fa-heart {
   font-size: 1.5rem;
-  margin-right: 1rem;
 }
 .content .heart {
   position: relative;

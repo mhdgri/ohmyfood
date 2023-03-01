@@ -113,6 +113,7 @@
     &__text-icon {
         @include flex-row;
         justify-content: space-between;
+        padding-right: 1.5rem;
         
     }
     &__indication {
