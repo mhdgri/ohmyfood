@@ -4,8 +4,8 @@
   "description": " Quatrième projet du parcours d'intégrateur web chez Openclassrooms. L'objectif est d'intégrer puis de dynamiser une page web avec des animations en utilisant le préprocesseur Sass",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/styles.scss:./css/styles.css --style expanded",
-    "prefix": "postcss ./sass/styles.css --use autoprefixer -d ./css/prefixed/"
+    "sass": "sass --watch ./sass/styles.scss:./sass/styles.css --style expanded",
+    "prefix": "postcss ./sass/styles.css --use autoprefixer -d ./sass/prefixed/"
   },
   "repository" : {
     "type" : "git",
