@@ -13,7 +13,7 @@
         left:0;
         top:0px;
         z-index:-1;
-        background: linear-gradient(#FF79DA, #9356DC);
+        background: linear-gradient($color-secondary, $color-primary);
         background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity:0;
@@ -25,7 +25,7 @@
         opacity:1;
     }
     & .heart:hover{
-        background: linear-gradient(#FF79DA, #9356DC);
+        background: linear-gradient($color-secondary, $color-primary);
         background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 0px $color-white;
@@ -44,7 +44,7 @@
 
 .loader {
         height: 100%;
-        background: white;
+        background: $color-white;
         margin: auto;
         position: fixed;
         top: 0;
@@ -66,8 +66,8 @@
     -ms-flex-align: center;
     align-items: center;
     border: 10px solid transparent;
-    border-top: 10px solid #9356DC;
-    border-bottom: 10px solid #FF79DA;
+    border-top: 10px solid $color-primary;
+    border-bottom: 10px solid $color-secondary;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -87,8 +87,8 @@
         height: 50px;
         border-radius: 50%;
         border: transparent 10px solid;
-        border-top: 10px solid #9356DC;
-        border-bottom: 10px solid #FF79DA;
+        border-top: 10px solid $color-primary;
+        border-bottom: 10px solid $color-secondary;
         opacity: .5;
     }
 }

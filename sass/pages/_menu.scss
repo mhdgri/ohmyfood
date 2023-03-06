@@ -9,7 +9,7 @@ body {
         border-radius: 40px 40px 0 0;
         position: relative;
         top: -86px;
-        background-color: #f6f6f6;
+        background-color: $light-grey;
         padding-bottom: 70px;
         @media  screen and (min-width: 1023px) {          
             position: relative;
@@ -44,7 +44,7 @@ body {
         margin: 0;
         font-size: 16px;
         font-weight: 300;
-        border-bottom: 3px solid #99E2D0;
+        border-bottom: 3px solid $color-tertiary;
         width: 2.4rem;
         line-height: 30px;
         text-transform: uppercase;
@@ -91,14 +91,14 @@ body {
     }
     .menuitems {
         @include flex-center;
-        background: #99E2D0;
+        background: $color-tertiary;
         width: 60px;
         height: 70px;
         border-radius: 0 15px 15px 0;
         margin: 0;
         & i {
             background: $color-white;
-            color: #99E2D0; 
+            color: $color-tertiary; 
             border-radius: 50%;
             padding:6%;
             font-size: 1rem;

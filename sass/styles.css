@@ -38,7 +38,6 @@ h3, p {
   position: absolute;
   left: 2rem;
   top: 2rem;
-  color: #353535;
 }
 @media screen and (min-width: 1023px) {
   .header__arrow a::before {
@@ -151,7 +150,7 @@ h3, p {
   cursor: pointer;
   transition: transform 0.2s ease;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
   width: 13rem;
   margin-top: 4rem;
 }
@@ -170,7 +169,7 @@ h3, p {
   cursor: pointer;
   transition: transform 0.2s ease;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
   margin-top: 1rem;
   width: 14rem;
 }
@@ -370,7 +369,7 @@ body .main-around {
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  background-color: #d2d2d2;
+  background-color: #eaeaea;
   height: 70px;
   -moz-column-gap: 17px;
        column-gap: 17px;
@@ -387,7 +386,7 @@ body .main-around {
 .reserve {
   text-align: center;
   padding: 2.4rem 0;
-  background-color: #f7f7f7;
+  background-color: #f6f6f6;
 }
 .reserve__title {
   font-size: 24px;
@@ -399,7 +398,7 @@ body .main-around {
 }
 
 .back {
-  background: #f7f7f7;
+  background: #f6f6f6;
 }
 
 .restaurants {
@@ -522,7 +521,7 @@ body .main-around {
   left: 0;
   top: 0px;
   z-index: -1;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -535,7 +534,7 @@ body .main-around {
   opacity: 1;
 }
 .content .heart:hover {
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -552,7 +551,7 @@ body .main-around {
 }
 .loader {
   height: 100%;
-  background: white;
+  background: #fff;
   margin: auto;
   position: fixed;
   top: 0;
@@ -568,8 +567,8 @@ body .main-around {
   justify-content: center;
   align-items: center;
   border: 10px solid transparent;
-  border-top: 10px solid #9356DC;
-  border-bottom: 10px solid #FF79DA;
+  border-top: 10px solid #9356dc;
+  border-bottom: 10px solid #ff79da;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -588,8 +587,8 @@ body .main-around {
   height: 50px;
   border-radius: 50%;
   border: transparent 10px solid;
-  border-top: 10px solid #9356DC;
-  border-bottom: 10px solid #FF79DA;
+  border-top: 10px solid #9356dc;
+  border-bottom: 10px solid #ff79da;
   opacity: 0.5;
 }
 
