@@ -34,10 +34,17 @@ h3, p {
   content: "\f060";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
   left: 2rem;
-  top: 1.6rem;
+  top: 2rem;
+  color: #353535;
+}
+@media screen and (min-width: 1023px) {
+  .header__arrow a::before {
+    position: absolute;
+    left: 4rem;
+  }
 }
 
 .back {
@@ -242,6 +249,9 @@ body .main-around {
   width: 100%;
   overflow: hidden;
   cursor: pointer;
+  animation: appear 1s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
 }
 .plate:hover .plate__icon-price {
   margin-right: 0;
@@ -610,6 +620,58 @@ body .main-around {
     visibility: hidden;
   }
 }
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-7 {
+  animation-delay: 0.7s;
+}
+
+.delay-8 {
+  animation-delay: 0.8s;
+}
+
+.delay-9 {
+  animation-delay: 0.9s;
+}
+
+.delay-10 {
+  animation-delay: 1s;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
