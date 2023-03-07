@@ -46,95 +46,6 @@ h3, p {
   }
 }
 
-.back {
-  background-color: #fff;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.fonctionnement {
-  counter-reset: numbers;
-  row-gap: 0.5rem;
-  padding: 48px 0 68px 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (min-width: 1023px) {
-  .fonctionnement {
-    width: 98%;
-  }
-}
-.fonctionnement__title {
-  width: 90%;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-}
-@media (min-width: 1023px) {
-  .fonctionnement__title {
-    width: 85%;
-  }
-}
-.fonctionnement__lists {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
-  width: 90%;
-}
-@media (min-width: 1023px) {
-  .fonctionnement__lists {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-    width: 85%;
-  }
-}
-.fonctionnement li {
-  width: 95%;
-  position: relative;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
-  list-style-type: none;
-  padding: 1.5rem 0rem;
-  border-radius: 15px;
-  border: none;
-  transition: all 0.3s ease;
-  background-color: #f6f6f6;
-  font-size: 14px;
-  font-weight: 500;
-}
-@media (min-width: 1023px) {
-  .fonctionnement li {
-    width: 90%;
-  }
-}
-.fonctionnement li:hover {
-  cursor: pointer;
-  transform: scale(1.02);
-  background: #fff;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.6);
-}
-.fonctionnement li::before {
-  content: counter(numbers);
-  counter-increment: numbers;
-  color: white;
-  background-color: #9356dc;
-  width: 2rem;
-  height: 2rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  position: absolute;
-  left: -1rem;
-  top: 1rem;
-}
-.fonctionnement i {
-  margin: 0 1.5rem 0 2rem;
-}
-
 .btn {
   display: flex;
   justify-content: center;
@@ -149,8 +60,8 @@ h3, p {
   color: #fff;
   cursor: pointer;
   transition: transform 0.2s ease;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(355deg, #9356dc 5%, #ff79da 100%);
   width: 13rem;
   margin-top: 4rem;
 }
@@ -168,8 +79,8 @@ h3, p {
   color: #fff;
   cursor: pointer;
   transition: transform 0.2s ease;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(355deg, #9356dc 5%, #ff79da 100%);
   margin-top: 1rem;
   width: 14rem;
 }
@@ -210,7 +121,7 @@ body .main-around {
   flex-direction: row;
   justify-content: space-between;
 }
-@media (min-width: 1023px) {
+@media screen and (min-width: 1023px) {
   .restaurant {
     display: flex;
     justify-content: center;
@@ -260,10 +171,14 @@ body .main-around {
 }
 .plate__content {
   white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
-.plate__content--margin {
+.plate__text {
   margin: 0.6rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .plate__icon-price {
   display: flex;
@@ -301,12 +216,12 @@ body .main-around {
   padding: 1.5rem 0 3rem 1.5rem;
   margin-top: -86px;
 }
-@media (min-width: 1023px) {
+@media screen and (min-width: 1023px) {
   .footer {
     margin-top: -70px;
   }
 }
-@media (min-width: 767px) {
+@media screen and (min-width: 767px) {
   .footer__content {
     display: flex;
     flex-direction: row-reverse;
@@ -317,7 +232,7 @@ body .main-around {
     padding: 3rem 0;
   }
 }
-@media (min-width: 1023px) {
+@media screen and (min-width: 1023px) {
   .footer__content {
     display: flex;
     flex-direction: row-reverse;
@@ -339,7 +254,7 @@ body .main-around {
 .footer__link a:hover {
   text-decoration: underline;
 }
-@media (min-width: 767px) {
+@media screen and (min-width: 767px) {
   .footer__link {
     display: flex;
     align-items: center;
@@ -348,7 +263,7 @@ body .main-around {
          column-gap: 1.5rem;
   }
 }
-@media (min-width: 1023px) {
+@media screen and (min-width: 1023px) {
   .footer__link {
     display: flex;
     align-items: center;
@@ -397,6 +312,78 @@ body .main-around {
   font-weight: 300;
 }
 
+.fonctionnement {
+  counter-reset: numbers;
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+@media screen and (min-width: 1023px) {
+  .fonctionnement {
+    width: 85%;
+  }
+}
+.fonctionnement__title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.fonctionnement__lists {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 2rem;
+  padding-left: 1.1rem;
+}
+@media screen and (min-width: 1023px) {
+  .fonctionnement__lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+.fonctionnement li {
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  list-style-type: none;
+  padding: 1.5rem 0rem;
+  border-radius: 15px;
+  border: none;
+  transition: all 0.3s ease;
+  background-color: #f6f6f6;
+  font-size: 14px;
+  font-weight: 500;
+}
+.fonctionnement li:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  background: #f5edff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement li:hover i {
+  color: #9356dc;
+}
+.fonctionnement li::before {
+  content: counter(numbers);
+  counter-increment: numbers;
+  color: white;
+  background-color: #9356dc;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  left: -1.1rem;
+  top: 1rem;
+}
+.fonctionnement i {
+  margin: 0 1.5rem 0 2rem;
+}
+
 .back {
   background: #f6f6f6;
 }
@@ -405,7 +392,11 @@ body .main-around {
   width: 90%;
   padding: 2rem 0 10rem 0;
   margin: 0 auto;
-  width: 85%;
+}
+@media screen and (min-width: 1023px) {
+  .restaurants {
+    width: 85%;
+  }
 }
 .restaurants__cards {
   display: grid;
@@ -414,7 +405,7 @@ body .main-around {
   row-gap: 1rem;
   width: 100%;
 }
-@media (min-width: 767px) {
+@media screen and (min-width: 767px) {
   .restaurants__cards {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -423,7 +414,7 @@ body .main-around {
          column-gap: 1rem;
   }
 }
-@media (min-width: 1023px) {
+@media screen and (min-width: 1023px) {
   .restaurants__cards {
     display: grid;
     grid-template-rows: 1fr;
@@ -486,7 +477,7 @@ body .main-around {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  padding-right: 1.5rem;
+  padding-right: 1rem;
 }
 .card__indication {
   margin-left: 10px;

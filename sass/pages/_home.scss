@@ -31,10 +31,79 @@
             size: 18px;
             weight: 300;
         }
-    }
-
-    
+    }   
 }
+.fonctionnement{
+    counter-reset: numbers;
+    margin: 0 auto;
+    width:90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    @include desktop {
+        width: 85%;
+    }
+    &__title {
+        font: {
+            size: 24px;
+            style: normal;
+            weight: 700;
+        }
+    }
+    &__lists {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 2rem;
+        padding-left: 1.1rem;
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            column-gap: 2rem;
+        }
+    }
+    & li {
+        position: relative;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+        list-style-type: none;
+        padding: 1.5rem 0rem;
+        border-radius: 15px;
+        border: none;
+        transition: all 0.3s ease;
+        background-color: $light-grey;
+        font: {
+            size: 14px;
+            weight: 500;
+        }   
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.02);
+            background: #f5edff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+        &:hover i {
+            color: $color-primary;
+        }
+        &::before {
+            content: counter(numbers);
+            counter-increment: numbers;
+            color:white;
+            background-color: $color-primary;
+            width: 2rem;
+            height: 2rem;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            position: absolute;
+            left: -1.1rem;
+            top: 1rem;
+        }
+    }
+    & i {
+    margin: 0 1.5rem 0 2rem;
+    } 
+}
+
 .back {
     background: $light-grey ;
 }
@@ -43,7 +112,9 @@
     width: 90%;
     padding: 2rem 0 10rem 0;
     margin: 0 auto;
-    width: 85%;
+    @include desktop {
+        width: 85%;
+    }
     &__cards {
         display: grid;
         grid-template-columns: 1fr;
@@ -113,7 +184,7 @@
     &__text-icon {
         @include flex-row;
         justify-content: space-between;
-        padding-right: 1.5rem;
+        padding-right: 1rem;
         
     }
     &__indication {
