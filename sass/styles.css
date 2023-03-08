@@ -21,7 +21,6 @@ h3, p {
 }
 
 .header {
-  font-family: "Shrikhand", cursive;
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   height: 85px;
@@ -115,11 +114,10 @@ body .main-around {
 .restaurant {
   padding: 20px 7% 0 5%;
   border-radius: 40px 40px 0px 0px;
-  position: relative;
+  justify-content: space-between;
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
 }
 @media screen and (min-width: 1023px) {
   .restaurant {
@@ -134,14 +132,13 @@ body .main-around {
 .menu {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 10px 5%;
   row-gap: 20px;
   width: 90%;
 }
 .menu__title {
   margin: 0;
-  font-size: 16px;
-  font-weight: 300;
   border-bottom: 3px solid #99E2D0;
   width: 2.4rem;
   line-height: 30px;
@@ -176,7 +173,6 @@ body .main-around {
 }
 .plate__text {
   margin: 0.6rem;
-  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -232,17 +228,6 @@ body .main-around {
     padding: 3rem 0;
   }
 }
-@media screen and (min-width: 1023px) {
-  .footer__content {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-    -moz-column-gap: 4rem;
-         column-gap: 4rem;
-    padding: 3rem 0;
-  }
-}
 .footer__link {
   display: flex;
   flex-direction: column;
@@ -275,7 +260,7 @@ body .main-around {
 .footer__icon {
   margin-right: 0.5rem;
 }
-.footer__icon.footer__icon--margin {
+.footer__icon--margin {
   margin-right: 0.6rem;
 }
 
@@ -319,22 +304,18 @@ body .main-around {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  padding: 28px 0 68px 0;
 }
 @media screen and (min-width: 1023px) {
   .fonctionnement {
     width: 85%;
   }
 }
-.fonctionnement__title {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-}
 .fonctionnement__lists {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 2rem;
-  padding-left: 1.1rem;
+  padding-left: 0.8rem;
 }
 @media screen and (min-width: 1023px) {
   .fonctionnement__lists {
@@ -354,8 +335,6 @@ body .main-around {
   border: none;
   transition: all 0.3s ease;
   background-color: #f6f6f6;
-  font-size: 14px;
-  font-weight: 500;
 }
 .fonctionnement li:hover {
   cursor: pointer;
@@ -371,14 +350,14 @@ body .main-around {
   counter-increment: numbers;
   color: white;
   background-color: #9356dc;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: grid;
   place-items: center;
   border-radius: 50%;
   position: absolute;
-  left: -1.1rem;
-  top: 1rem;
+  left: -0.8rem;
+  top: 1.3rem;
 }
 .fonctionnement i {
   margin: 0 1.5rem 0 2rem;
@@ -455,15 +434,13 @@ body .main-around {
   border-radius: 15px 15px 0 0;
   display: block;
 }
-.card__new {
+.card__badge {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #99E2D0;
   border-radius: 4px;
   color: #278870;
-  font-weight: 500;
-  font-size: 14px;
   padding: 0.2rem;
   width: 80px;
   height: 29px;
@@ -477,18 +454,10 @@ body .main-around {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  padding-right: 1rem;
+  padding-right: 1.1rem;
 }
 .card__indication {
   margin-left: 10px;
-}
-.card__indication h3 {
-  font-size: 18px;
-  font-weight: 700;
-}
-.card__indication p {
-  font-size: 17px;
-  font-weight: 300;
 }
 .card__name-restaurant {
   margin-top: 16px;
@@ -498,8 +467,9 @@ body .main-around {
   margin-top: 5px;
 }
 
+/* heart */
 .content .fa-heart {
-  font-size: 1.5rem;
+  font-size: 21px;
 }
 .content .heart {
   position: relative;
@@ -532,6 +502,7 @@ body .main-around {
   -webkit-text-stroke: 0px #fff;
 }
 
+/* add */
 @keyframes rotate-check {
   from {
     transform: rotate(-270deg);
@@ -540,6 +511,7 @@ body .main-around {
     transform: rotate(0);
   }
 }
+/* loading */
 .loader {
   height: 100%;
   background: #fff;
@@ -610,6 +582,7 @@ body .main-around {
     visibility: hidden;
   }
 }
+/* gradual onset */
 @keyframes appear {
   0% {
     transform: scale(0);
@@ -618,6 +591,7 @@ body .main-around {
     transform: scale(1);
   }
 }
+/* loop "for" */
 .delay-0 {
   animation-delay: 0s;
 }
@@ -666,11 +640,61 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* header */
 h1 {
   font-family: "shrikhand", sans-serif;
-  font-weight: 400;
   font-style: italic;
+}
+
+/* home */
+.fonctionnement li {
+  font-size: 16px;
+  font-weight: 500;
+}
+.fonctionnement li i {
+  font-size: 1.1rem;
+  color: #7e7e7e;
+}
+
+.card__indication p {
+  font-size: 17px;
+  font-weight: 300;
+}
+.card__badge {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* menu */
+.restaurant__heading {
+  font-family: "shrikhand", sans-serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.menu__title {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+h4 + p {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.footer li {
+  font-size: 16px;
+  font-weight: 500;
+}
+.footer__font {
+  font-weight: 400;
+}
+
+/* loop "each" */
+h1 {
   font-size: 30px;
+  font-weight: 400;
 }
 
 h2 {
@@ -678,18 +702,12 @@ h2 {
   font-weight: 700;
 }
 
-h4 {
-  font-weight: 500;
+h3 {
   font-size: 18px;
-}
-h4 + p {
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 700;
 }
 
-.restaurant__heading {
-  font-family: "shrikhand", sans-serif;
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 400;
+h4 {
+  font-size: 18px;
+  font-weight: 500;
 }/*# sourceMappingURL=styles.css.map */

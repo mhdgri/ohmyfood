@@ -3,7 +3,7 @@
     justify-content: center;
     background-color: $grey;
     height: 70px;
-    column-gap: 17px;;
+    column-gap: 17px;
     &__icon {
         width: 12px;
         height: 16px;
@@ -40,21 +40,15 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    padding: 28px 0 68px 0;
     @include desktop {
         width: 85%;
-    }
-    &__title {
-        font: {
-            size: 24px;
-            style: normal;
-            weight: 700;
-        }
     }
     &__lists {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         row-gap: 2rem;
-        padding-left: 1.1rem;
+        padding-left: .8rem;
         @include desktop {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -70,11 +64,7 @@
         border-radius: 15px;
         border: none;
         transition: all 0.3s ease;
-        background-color: $light-grey;
-        font: {
-            size: 14px;
-            weight: 500;
-        }   
+        background-color: $light-grey; 
         &:hover {
             cursor: pointer;
             transform: scale(1.02);
@@ -89,14 +79,14 @@
             counter-increment: numbers;
             color:white;
             background-color: $color-primary;
-            width: 2rem;
-            height: 2rem;
+            width: 1.5rem;
+            height: 1.5rem;
             display: grid;
             place-items: center;
             border-radius: 50%;
             position: absolute;
-            left: -1.1rem;
-            top: 1rem;
+            left: -.8rem;
+            top: 1.3rem;
         }
     }
     & i {
@@ -164,15 +154,11 @@
         border-radius: 15px 15px 0 0;
         display: block
     }
-    &__new {
+    &__badge {
         @include flex-center;
         background: $color-tertiary;
         border-radius: 4px;
         color: darken($color-tertiary, 40%);
-        font: {
-            weight: 500;
-            size: 14px;
-        }
         padding: 0.2rem;
         width: 80px;
         height: 29px;
@@ -184,19 +170,10 @@
     &__text-icon {
         @include flex-row;
         justify-content: space-between;
-        padding-right: 1rem;
-        
+        padding-right: 1.1rem;   
     }
     &__indication {
         margin-left: 10px;
-        & h3 {
-            font-size: 18px;
-            font-weight: 700;
-        }
-        & p {
-            font-size: 17px;
-            font-weight: 300;
-        }
     }         
     &__name-restaurant {
         margin: {

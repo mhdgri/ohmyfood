@@ -24,10 +24,9 @@ body {
 
 .restaurant {
     padding: 20px 7% 0 5%;
-    border-radius: 40px 40px 0px 0px;
-    position: relative;  
-    @include flex-row;
+    border-radius: 40px 40px 0px 0px;  
     justify-content: space-between;
+    @include flex-row;
     @include  desktop {
         @include flex-center;
         column-gap: 1.5rem;
@@ -35,15 +34,12 @@ body {
 }
 
 .menu {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     padding: 10px 5%;
     row-gap: 20px;
     width: 90%;
     &__title {
         margin: 0;
-        font-size: 16px;
-        font-weight: 300;
         border-bottom: 3px solid $color-tertiary;
         width: 2.4rem;
         line-height: 30px;
@@ -78,7 +74,6 @@ body {
     }
     &__text {
         margin:.6rem;
-        white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
     }

@@ -1,35 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 body {
     font-family: 'Roboto', sans-serif;
 }
-
+/* header */
 h1 {
     font: {
         family: "shrikhand", sans-serif;
-        weight: 400;
         style: italic;
-        size: 30px;
     }
 }
 
-h2 {
-    font: {
-        size: 24px;
-        weight: 700;
-    }
-}
+/* home */
 
-h4 {
-    font: {
-        weight: 500;
-        size: 18px;
-    }
-    & + p {
+.fonctionnement {
+    & li {
         font: {
-            weight: 400;
-            size:16px;
+            size: 16px;
+            weight: 500;
+        }
+        & i {
+            font-size : 1.1rem;
+            color: #7e7e7e;
         }
     }
 }
+
+.card {
+    &__indication {
+        & p {
+            font-size: 17px;
+            font-weight: 300;
+        }
+    }
+    &__badge {
+        font: {
+            weight: 500;
+            size: 14px;
+        }
+    }
+}
+
+/* menu */
 
 .restaurant__heading {
     font: {
@@ -37,5 +50,46 @@ h4 {
         size: 28px;
         style: italic;
         weight: 400;
+    }
+}
+
+.menu{
+    &__title {
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+h4 {
+    & + p {
+        font: {
+            weight: 300;
+            size:15px;
+        }
+    }
+}
+
+
+.footer {
+    & li {
+        font: {
+            size: 16px;
+            weight: 500;
+        }
+    }
+    &__font {
+        font-weight: 400;
+    }
+}
+
+/* loop "each" */
+
+$titres : h1, h2, h3, h4;
+$fontes: 30px, 24px, 18px, 18px;
+$f-weight: 400, 700, 700, 500;
+@each $titre, $fonte,$weight in zip($titres, $fontes, $f-weight) {
+    #{$titre} {
+        font-size: $fonte;
+        font-weight: $weight;
     }
 }

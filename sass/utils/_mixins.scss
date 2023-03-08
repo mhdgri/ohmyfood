@@ -45,3 +45,7 @@ align-items: center;
         @content;
     }
 }
+
+@mixin img {
+    width: 100%;
+}
