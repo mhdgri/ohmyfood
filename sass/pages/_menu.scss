@@ -34,7 +34,8 @@ body {
 }
 
 .menu {
-    @include flex-column;
+    display: flex;
+    flex-direction: column;
     padding: 10px 5%;
     row-gap: 20px;
     width: 90%;
